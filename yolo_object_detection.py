@@ -1,4 +1,4 @@
-from cv2 import cv2
+import cv2
 import numpy as np
 
 # Load Yolo
@@ -55,7 +55,6 @@ for i in range(len(boxes)):
         color = colors[i]
         cv2.rectangle(img, (x, y), (x + w, y + h), color, 2)
         cv2.putText(img, label, (x, y + 30), font, 3, color, 3)
-        
 
 
 cv2.imshow("Image", img)
